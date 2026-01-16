@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Organic Growth Theme - Natural & Fresh -->
+    
+    <!-- Primary Colors (Emerald Green) -->
+    <color name="primary">#059669</color>
+    <color name="primary_dark">#047857</color>
+    <color name="primary_light">#10B981</color>
+    <color name="primary_extra_light">#34D399</color>
+    
+    <!-- Secondary Colors (Mint) -->
+    <color name="secondary">#D1FAE5</color>
+    <color name="secondary_dark">#A7F3D0</color>
+    <color name="secondary_light">#ECFDF5</color>
+    
+    <!-- Accent Colors (Earthy Brown) -->
+    <color name="accent">#92400E</color>
+    <color name="accent_light">#B45309</color>
+    <color name="accent_dark">#78350F</color>
+    
+    <!-- Background & Surface -->
+    <color name="background">#FFFAF0</color>
+    <color name="background_secondary">#FFF8E7</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="surface_light">#FAFAFA</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <!-- Standard Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_100">#F3F4F6</color>
+    <color name="gray_200">#E5E7EB</color>
+    <color name="gray_300">#D1D5DB</color>
+    <color name="gray_500">#6B7280</color>
+    <color name="gray_700">#374151</color>
+    <color name="gray_text">#6B7280</color>
+    
+    <!-- Status Colors -->
+    <color name="red_error">#DC2626</color>
+    <color name="green_success">#059669</color>
+    
+    <!-- Legacy Support (untuk backward compatibility) -->
+    <color name="maroon_primary">#059669</color>
+    <color name="maroon_light">#10B981</color>
+    <color name="maroon_dark">#047857</color>
+    <color name="gold_accent">#92400E</color>
+    <color name="teal_200">#10B981</color>
+    <color name="teal_700">#047857</color>
+</resources>
