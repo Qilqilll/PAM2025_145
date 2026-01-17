@@ -9,7 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.tugasakhir_145.R
+import com.example.tugasakhir_145.data.local.AppDatabase
 import com.example.tugasakhir_145.databinding.FragmentAdminDashboardBinding
+import kotlinx.coroutines.launch
+import java.text.NumberFormat
+import java.util.Locale
 
 class AdminDashboardFragment : Fragment() {
 
@@ -42,6 +46,9 @@ class AdminDashboardFragment : Fragment() {
             }
         })
 
+        // Load and display total revenue
+        loadTotalRevenue()
+
         binding.btnManageProducts.setOnClickListener {
             // Navigate to Product List
             findNavController().navigate(R.id.action_adminDashboardFragment_to_productListFragment)
@@ -55,6 +62,19 @@ class AdminDashboardFragment : Fragment() {
 
         binding.btnLogout.setOnClickListener {
             findNavController().navigate(R.id.action_adminDashboardFragment_to_loginFragment)
+        }
+    }
+
+    private fun loadTotalRevenue() {
+        val db = AppDatabase.getDatabase(requireContext())
+        viewLifecycleOwner.lifecycleScope.launch {
+            db.transactionDao().getTotalRevenue().collect { total ->
+                val revenue = total ?: 0L
+                val format = NumberFormat.getCurrencyInstance(Locale("id", "ID"))
+                if (_binding != null) {
+                    binding.tvTotalRevenue.text = format.format(revenue)
+                }
+            }
         }
     }
 
